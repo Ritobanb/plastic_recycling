@@ -1,0 +1,27 @@
+{
+  "title": "Get in Touch",
+  "description": "Interested in collaborating or learning more about my work? I'd love to hear from you.",
+  "email": "contact@example.com",
+  "social": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/yourusername",
+      "icon": "Linkedin"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/yourusername",
+      "icon": "Twitter"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/yourusername",
+      "icon": "Github"
+    }
+  ],
+  "form": {
+    "title": "Send a Message",
+    "description": "Have a question or want to work together? Send me a message and I'll get back to you soon.",
+    "submitText": "Send Message"
+  }
+}

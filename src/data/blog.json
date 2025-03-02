@@ -1,0 +1,33 @@
+{
+  "title": "Latest Insights",
+  "description": "Explore my thoughts and insights on environmental conservation and sustainability.",
+  "posts": [
+    {
+      "id": "future-recycling",
+      "title": "The Future of Plastic Recycling",
+      "description": "Exploring innovative technologies and methods that are revolutionizing how we recycle plastic waste.",
+      "date": "2024-02-28",
+      "image": "/images/blog/recycling-future.jpg",
+      "tags": ["Innovation", "Recycling", "Technology"],
+      "readTime": "5 min read"
+    },
+    {
+      "id": "ocean-health",
+      "title": "Protecting Ocean Health",
+      "description": "Understanding the impact of plastic pollution on marine ecosystems and what we can do about it.",
+      "date": "2024-02-15",
+      "image": "/images/blog/ocean-health.jpg",
+      "tags": ["Ocean Conservation", "Environment", "Action"],
+      "readTime": "4 min read"
+    },
+    {
+      "id": "community-impact",
+      "title": "Creating Community Impact",
+      "description": "How local initiatives can drive global change in environmental conservation.",
+      "date": "2024-02-01",
+      "image": "/images/blog/community-impact.jpg",
+      "tags": ["Community", "Sustainability", "Change"],
+      "readTime": "3 min read"
+    }
+  ]
+}

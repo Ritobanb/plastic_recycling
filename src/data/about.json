@@ -1,0 +1,24 @@
+{
+  "title": "About Me",
+  "description": "I'm an environmentalist passionate about plastic recycling and sustainability initiatives. My work focuses on developing innovative solutions to reduce plastic waste and promote environmental conservation.",
+  "cards": [
+    {
+      "id": "recycling",
+      "title": "Plastic Recycling",
+      "description": "Developing innovative methods to recycle and repurpose plastic waste into valuable products.",
+      "icon": "Recycle"
+    },
+    {
+      "id": "sustainability",
+      "title": "Sustainability",
+      "description": "Promoting sustainable practices and circular economy principles to reduce environmental impact.",
+      "icon": "Leaf"
+    },
+    {
+      "id": "protection",
+      "title": "Environmental Protection",
+      "description": "Advocating for policies and practices that protect our natural ecosystems and biodiversity.",
+      "icon": "Droplets"
+    }
+  ]
+}

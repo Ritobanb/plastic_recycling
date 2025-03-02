@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
+import navData from "../src/data/navigation.json"
+import type { NavigationLink } from "../src/types/content"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -39,24 +41,17 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#portfolio" },
-    { name: "Blog", href: "#blog" },
-    { name: "Contact", href: "#contact" },
-  ]
-
   return (
     <header 
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/90 backdrop-blur-md shadow-md' 
+        isScrolled || isMenuOpen
+          ? 'bg-white/95 backdrop-blur-sm shadow-lg' 
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-8 h-8 md:w-10 md:h-10 transition-transform duration-300 group-hover:scale-110">
               <Image
@@ -68,7 +63,7 @@ export default function Navbar() {
               />
             </div>
             <span className={`font-poppins font-bold text-lg md:text-xl ${
-              isScrolled ? 'text-emerald-700' : 'text-white'
+              isScrolled || isMenuOpen ? 'text-emerald-700' : 'text-white'
             } transition-colors duration-300`}>
               Sumouli Mukherjee
             </span>
@@ -76,9 +71,9 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            {navItems.map((item) => (
+            {navData.links.map((item: NavigationLink) => (
               <Link
-                key={item.name}
+                key={item.id}
                 href={item.href}
                 className={`px-4 py-2 rounded-lg font-poppins text-sm font-medium ${
                   isScrolled
@@ -86,16 +81,16 @@ export default function Navbar() {
                     : 'text-white/90 hover:text-white hover:bg-white/10'
                 } transition-all duration-300`}
               >
-                {item.name}
+                {item.label}
               </Link>
             ))}
           </nav>
 
           {/* Mobile Menu Button */}
           <button 
-            className={`md:hidden p-2 rounded-lg transition-colors duration-300 ${
-              isScrolled
-                ? 'text-gray-600 hover:bg-emerald-50 hover:text-emerald-600'
+            className={`block md:hidden p-2 rounded-lg transition-colors duration-300 ${
+              isScrolled || isMenuOpen
+                ? 'text-emerald-600 hover:bg-emerald-50'
                 : 'text-white hover:bg-white/10'
             }`}
             onClick={toggleMenu}
@@ -104,35 +99,36 @@ export default function Navbar() {
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-      </div>
 
-      {/* Mobile Navigation Overlay */}
-      <div
-        className={`fixed inset-0 bg-black/50 md:hidden transition-opacity duration-300 ${
-          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-        onClick={toggleMenu}
-        aria-hidden="true"
-      />
-
-      {/* Mobile Navigation Menu */}
-      <div
-        className={`absolute top-16 left-0 right-0 bg-white md:hidden transform transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "translate-y-0" : "-translate-y-full"
-        }`}
-      >
-        <nav className="container mx-auto px-4 py-6 flex flex-col">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="py-3 px-4 font-poppins text-base font-medium text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition-colors rounded-lg"
-              onClick={toggleMenu}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </nav>
+        {/* Mobile Navigation Menu */}
+        <div
+          className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+            isMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <nav className="py-6 flex flex-col divide-y divide-emerald-100">
+            {navData.links.map((item: NavigationLink, index) => (
+              <Link
+                key={item.id}
+                href={item.href}
+                className={`group relative flex items-center py-4 px-4 font-poppins text-base font-medium text-emerald-700 transition-all duration-300
+                  ${index === 0 ? 'border-t border-emerald-100' : ''}
+                  hover:bg-gradient-to-r hover:from-emerald-50/80 hover:to-transparent`}
+                onClick={toggleMenu}
+              >
+                <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-2">
+                  {item.label}
+                </span>
+                <span className="absolute left-0 w-0 h-full bg-emerald-100/50 transition-all duration-300 group-hover:w-full" />
+              </Link>
+            ))}
+            <div className="py-6 px-4">
+              <p className="text-sm text-emerald-600/80 font-poppins">
+                Let's make a sustainable future together.
+              </p>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
   )

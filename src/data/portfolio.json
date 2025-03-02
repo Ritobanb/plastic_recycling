@@ -1,0 +1,30 @@
+{
+  "title": "Featured Projects",
+  "description": "Discover some of my key initiatives in environmental conservation and sustainability.",
+  "projects": [
+    {
+      "id": "ocean-cleanup",
+      "title": "Ocean Cleanup Initiative",
+      "description": "Developing innovative methods to remove plastic waste from oceans using sustainable technologies.",
+      "image": "/images/portfolio/ocean-cleanup.jpg",
+      "tags": ["Ocean Conservation", "Innovation", "Plastic Waste"],
+      "link": "https://example.com/ocean-cleanup"
+    },
+    {
+      "id": "recycling-innovation",
+      "title": "Smart Recycling System",
+      "description": "AI-powered recycling system that automatically sorts and processes different types of plastic waste.",
+      "image": "/images/portfolio/recycling.jpg",
+      "tags": ["AI", "Recycling", "Technology"],
+      "link": "https://example.com/smart-recycling"
+    },
+    {
+      "id": "community-program",
+      "title": "Community Sustainability Program",
+      "description": "Educational initiative to promote sustainable practices in local communities.",
+      "image": "/images/portfolio/community.jpg",
+      "tags": ["Education", "Community", "Sustainability"],
+      "link": "https://example.com/community"
+    }
+  ]
+}
