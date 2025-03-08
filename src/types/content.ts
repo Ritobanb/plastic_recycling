@@ -10,14 +10,15 @@ export interface Navigation {
 
 export interface AboutCard {
   id: string;
+  icon: string;
   title: string;
   description: string;
-  icon: string;
 }
 
 export interface About {
   title: string;
   description: string;
+  profileImage: string;
   cards: AboutCard[];
 }
 

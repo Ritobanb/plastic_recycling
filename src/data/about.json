@@ -1,24 +1,25 @@
 {
   "title": "About Me",
-  "description": "I'm an environmentalist passionate about plastic recycling and sustainability initiatives. My work focuses on developing innovative solutions to reduce plastic waste and promote environmental conservation.",
+  "description": "As a dedicated environmentalist and sustainability advocate, I specialize in pioneering solutions to combat plastic waste and drive conservation efforts. With a career rooted in environmental stewardship, I focus on designing and implementing innovative recycling systems that transform waste management practices and reduce ecological footprints.<br>My expertise spans collaborating with municipalities, NGOs, and private-sector partners to develop scalable sustainability programs—from community plastic recovery initiatives to corporate circular-economy strategies. I am deeply committed to bridging gaps between policy, technology, and grassroots action, ensuring tangible progress toward a zero-waste future.<br>Driven by the belief that sustainability is a collective responsibility, I aim to inspire systemic change through creativity, collaboration, and relentless advocacy. Let's connect to explore how we can turn today's environmental challenges into tomorrow's opportunities.",
+  "profileImage": "/images/profile.jpg?v=3",
   "cards": [
     {
       "id": "recycling",
-      "title": "Plastic Recycling",
-      "description": "Developing innovative methods to recycle and repurpose plastic waste into valuable products.",
-      "icon": "Recycle"
+      "icon": "Recycle",
+      "title": "Innovative Recycling",
+      "description": "Developing cutting-edge solutions for plastic waste management and recycling processes."
     },
     {
-      "id": "sustainability",
-      "title": "Sustainability",
-      "description": "Promoting sustainable practices and circular economy principles to reduce environmental impact.",
-      "icon": "Leaf"
+      "id": "conservation",
+      "icon": "Leaf",
+      "title": "Environmental Conservation",
+      "description": "Promoting sustainable practices and conservation efforts to protect our environment."
     },
     {
-      "id": "protection",
-      "title": "Environmental Protection",
-      "description": "Advocating for policies and practices that protect our natural ecosystems and biodiversity.",
-      "icon": "Droplets"
+      "id": "water",
+      "icon": "Droplets",
+      "title": "Water Protection",
+      "description": "Working to keep our oceans and waterways free from plastic pollution."
     }
   ]
 }

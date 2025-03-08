@@ -3,47 +3,21 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { BackToTop } from "./back-to-top"
+import blogData from "../src/data/blog.json"
 
 export default function Blog() {
-  const posts = [
-    {
-      id: 1,
-      title: "The Future of Plastic Recycling: Innovations and Challenges",
-      excerpt: "Explore the cutting-edge technologies transforming how we recycle plastics and the obstacles we still need to overcome.",
-      image: "/images/plastic-waste-1.jpg",
-      date: "May 15, 2019",
-      readTime: "7 min read",
-    },
-    {
-      id: 2,
-      title: "Microplastics: The Invisible Threat to Our Oceans",
-      excerpt: "Understanding the impact of microplastics on marine ecosystems and what we can do to address this growing environmental concern.",
-      image: "/images/volunteer.jpg",
-      date: "April 22, 2019",
-      readTime: "6 min read",
-    },
-    {
-      id: 3,
-      title: "Building a Circular Economy: Beyond Recycling",
-      excerpt: "How rethinking our approach to production, consumption, and waste management can create a more sustainable future.",
-      image: "/images/waste.png",
-      date: "March 8, 2019",
-      readTime: "8 min read",
-    },
-  ]
-
   return (
     <section id="blog" className="relative py-16 md:py-24 bg-gradient-to-b from-emerald-50/50 to-white">
       <div className="container space-y-12">
         <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-emerald-900">Blog</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-emerald-900">{blogData.title}</h2>
           <p className="text-emerald-700/90 text-lg">
-            Insights and thoughts on environmental conservation, sustainability, and plastic recycling.
+            {blogData.description}
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {posts.map((post) => (
+          {blogData.posts.map((post) => (
             <Card 
               key={post.id} 
               className="group overflow-hidden hover:shadow-lg transition-all duration-300 border-emerald-100/50"
@@ -78,7 +52,7 @@ export default function Blog() {
                   className="p-0 text-emerald-600 hover:text-emerald-700 transition-colors duration-300"
                   asChild
                 >
-                  <a href={`#blog-post-${post.id}`} className="flex items-center gap-2">
+                  <a href={post.link} className="flex items-center gap-2">
                     Read More <ArrowRight className="h-4 w-4" />
                   </a>
                 </Button>

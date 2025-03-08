@@ -3,28 +3,22 @@
   "description": "Discover some of my key initiatives in environmental conservation and sustainability.",
   "projects": [
     {
-      "id": "ocean-cleanup",
-      "title": "Ocean Cleanup Initiative",
-      "description": "Developing innovative methods to remove plastic waste from oceans using sustainable technologies.",
-      "image": "/images/portfolio/ocean-cleanup.jpg",
-      "tags": ["Ocean Conservation", "Innovation", "Plastic Waste"],
-      "link": "https://example.com/ocean-cleanup"
+      "id": "industrial-cleanup",
+      "title": "Post Industrial Plastics Recycling Initiative",
+      "description": "I spearheaded post-industrial plastics recycling, diverting waste from landfills and creating high-quality recycled materials to foster a more sustainable and eco-friendly industrial environment.",
+      "image": "/images/industrial-cleanup.jpg",
+      "tags": ["Industrial Recycling", "Sustainability", "Plastic Waste"],
+      "demoUrl": "#",
+      "caseStudyUrl": "#"
     },
     {
-      "id": "recycling-innovation",
-      "title": "Smart Recycling System",
-      "description": "AI-powered recycling system that automatically sorts and processes different types of plastic waste.",
-      "image": "/images/portfolio/recycling.jpg",
-      "tags": ["AI", "Recycling", "Technology"],
-      "link": "https://example.com/smart-recycling"
-    },
-    {
-      "id": "community-program",
-      "title": "Community Sustainability Program",
-      "description": "Educational initiative to promote sustainable practices in local communities.",
-      "image": "/images/portfolio/community.jpg",
-      "tags": ["Education", "Community", "Sustainability"],
-      "link": "https://example.com/community"
+      "id": "sustainable-packaging",
+      "title": "Sustainable Packaging Solutions",
+      "description": "Led the export of post-industrial plastics from America to global markets, supporting the circular economy and meeting the demand for recycled materials.",
+      "image": "/images/plastic-waste-1.jpg",
+      "tags": ["Sustainable Packaging", "Product Design", "Circular Economy"],
+      "demoUrl": "#",
+      "caseStudyUrl": "#"
     }
   ]
 }

@@ -3,6 +3,7 @@ import { Recycle, Leaf, Droplets } from "lucide-react"
 import { BackToTop } from "./back-to-top"
 import aboutData from "../src/data/about.json"
 import type { AboutCard } from "../src/types/content"
+import Image from "next/image"
 
 const iconMap = {
   Recycle,
@@ -11,17 +12,45 @@ const iconMap = {
 } as const
 
 export default function About() {
+  const paragraphs = aboutData.description.split("<br>")
+
   return (
     <section id="about" className="relative bg-gradient-to-b from-emerald-50/50 to-white py-16 md:py-24">
       <div className="container space-y-12">
-        <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-emerald-900">{aboutData.title}</h2>
-          <p className="text-emerald-700/90 text-lg">
-            {aboutData.description}
-          </p>
+        <div className="text-center mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-8">{aboutData.title}</h2>
+          
+          <div className="relative max-w-6xl mx-auto">
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="flex-1 text-left space-y-6">
+                {paragraphs.map((paragraph, index) => (
+                  <p key={index} className="text-emerald-700/90 text-lg leading-relaxed">
+                    {paragraph.trim()}
+                  </p>
+                ))}
+              </div>
+              
+              <div className="md:w-80 shrink-0 mx-auto md:mx-0">
+                <div className="sticky top-8">
+                  <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-lg">
+                    <Image
+                      src={aboutData.profileImage}
+                      alt="Profile"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 320px"
+                      priority
+                      loading="eager"
+                      unoptimized
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {aboutData.cards.map((card: AboutCard) => {
             const Icon = iconMap[card.icon as keyof typeof iconMap]
             return (

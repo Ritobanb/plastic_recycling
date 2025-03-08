@@ -1,71 +1,84 @@
-import Link from "next/link"
-import { Linkedin, Twitter, Globe, Leaf } from "lucide-react"
+import { Mail, MapPin, Phone, Github, Twitter, Linkedin } from "lucide-react"
+import contactData from "../src/data/contact.json"
+
+const iconMap = {
+  Mail,
+  MapPin,
+  Phone,
+  linkedin: Linkedin,
+  twitter: Twitter,
+  github: Github,
+} as const
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="border-t bg-muted/50">
-      <div className="container py-8 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-              <Leaf className="h-5 w-5 text-primary" />
-              <span>Sumouli Mukherjee</span>
-            </Link>
-            <p className="text-muted-foreground">
-              An environmentalist dedicated to creating a sustainable future through innovative recycled plastic
-              solutions and environmental advocacy.
-            </p>
-            <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Website">
-                <Globe className="h-5 w-5" />
-              </a>
+    <footer className="bg-emerald-900 text-white py-12">
+      <div className="container">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <div className="space-y-3">
+              {Object.entries(contactData.contactInfo).map(([key, info]) => {
+                const Icon = iconMap[info.icon as keyof typeof iconMap]
+                return (
+                  <div key={key} className="flex items-center gap-3">
+                    <Icon className="w-4 h-4 text-emerald-400" />
+                    <span className="text-emerald-100">{info.value}</span>
+                  </div>
+                )
+              })}
             </div>
           </div>
 
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Quick Links</h3>
-            <nav className="flex flex-col gap-2">
-              <Link href="#home" className="text-muted-foreground hover:text-primary transition-colors">
-                Home
-              </Link>
-              <Link href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-                About
-              </Link>
-              <Link href="#portfolio" className="text-muted-foreground hover:text-primary transition-colors">
-                Projects
-              </Link>
-              <Link href="#blog" className="text-muted-foreground hover:text-primary transition-colors">
-                Blog
-              </Link>
-              <Link href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
-                Contact
-              </Link>
-            </nav>
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#about" className="text-emerald-100 hover:text-emerald-400 transition-colors duration-300">About</a>
+              </li>
+              <li>
+                <a href="#portfolio" className="text-emerald-100 hover:text-emerald-400 transition-colors duration-300">Portfolio</a>
+              </li>
+              <li>
+                <a href="#blog" className="text-emerald-100 hover:text-emerald-400 transition-colors duration-300">Blog</a>
+              </li>
+              <li>
+                <a href="#contact" className="text-emerald-100 hover:text-emerald-400 transition-colors duration-300">Contact</a>
+              </li>
+            </ul>
           </div>
 
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Contact</h3>
-            <div className="space-y-2 text-muted-foreground">
-              <p>Mumbai, India</p>
-              <p>sumouli.mukherjee@example.com</p>
-              <p>+1 (234) 567-890</p>
+          {/* Social Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Follow Me</h3>
+            <div className="flex gap-4">
+              {contactData.social.map((item) => {
+                const Icon = iconMap[item.icon as keyof typeof iconMap]
+                return (
+                  <a
+                    key={item.platform}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-400 hover:text-emerald-300 transition-colors duration-300"
+                  >
+                    <Icon className="w-5 h-5" />
+                    <span className="sr-only">{item.platform}</span>
+                  </a>
+                )
+              })}
             </div>
           </div>
         </div>
 
-        <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-          <p>© {currentYear} Sumouli Mukherjee. All rights reserved.</p>
+        <div className="border-t border-emerald-800 pt-8 text-center text-emerald-400">
+          <p>&copy; {currentYear} All rights reserved.</p>
         </div>
       </div>
     </footer>
   )
 }
-

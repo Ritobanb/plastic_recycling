@@ -1,33 +1,33 @@
 {
-  "title": "Latest Insights",
-  "description": "Explore my thoughts and insights on environmental conservation and sustainability.",
+  "title": "Blog",
+  "description": "Insights and thoughts on environmental conservation, sustainability, and plastic recycling.",
   "posts": [
     {
-      "id": "future-recycling",
-      "title": "The Future of Plastic Recycling",
-      "description": "Exploring innovative technologies and methods that are revolutionizing how we recycle plastic waste.",
-      "date": "2024-02-28",
-      "image": "/images/blog/recycling-future.jpg",
-      "tags": ["Innovation", "Recycling", "Technology"],
-      "readTime": "5 min read"
+      "id": 1,
+      "title": "The Future of Plastic Recycling: Innovations and Challenges",
+      "excerpt": "Explore the cutting-edge technologies transforming how we recycle plastics and the obstacles we still need to overcome.",
+      "image": "/images/plastic-waste-1.jpg",
+      "date": "May 15, 2019",
+      "readTime": "7 min read",
+      "link": "#blog-post-1"
     },
     {
-      "id": "ocean-health",
-      "title": "Protecting Ocean Health",
-      "description": "Understanding the impact of plastic pollution on marine ecosystems and what we can do about it.",
-      "date": "2024-02-15",
-      "image": "/images/blog/ocean-health.jpg",
-      "tags": ["Ocean Conservation", "Environment", "Action"],
-      "readTime": "4 min read"
+      "id": 2,
+      "title": "Microplastics: The Invisible Threat to Our Oceans",
+      "excerpt": "Understanding the impact of microplastics on marine ecosystems and what we can do to address this growing environmental concern.",
+      "image": "/images/volunteer.jpg",
+      "date": "April 22, 2019",
+      "readTime": "6 min read",
+      "link": "#blog-post-2"
     },
     {
-      "id": "community-impact",
-      "title": "Creating Community Impact",
-      "description": "How local initiatives can drive global change in environmental conservation.",
-      "date": "2024-02-01",
-      "image": "/images/blog/community-impact.jpg",
-      "tags": ["Community", "Sustainability", "Change"],
-      "readTime": "3 min read"
+      "id": 3,
+      "title": "Building a Circular Economy: Beyond Recycling",
+      "excerpt": "How rethinking our approach to production, consumption, and waste management can create a more sustainable future.",
+      "image": "/images/waste.png",
+      "date": "March 8, 2019",
+      "readTime": "8 min read",
+      "link": "#blog-post-3"
     }
   ]
 }
