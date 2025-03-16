@@ -1,6 +1,11 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /404
+
+# *
+User-agent: *
+Allow: /images
 
 # Host
 Host: https://www.meetsumouli.com
