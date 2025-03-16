@@ -30,7 +30,7 @@ export default function Hero() {
               {/* Text Content */}
               <div className="w-full md:max-w-lg text-left order-2 md:order-1">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-                  Hi, I'm{" "}
+                  Hi, I&apos;m{" "}
                   <span className="text-emerald-400 drop-shadow-lg">
                     Sumouli
                   </span>

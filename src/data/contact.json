@@ -21,18 +21,13 @@
   "social": [
     {
       "platform": "LinkedIn",
-      "url": "https://linkedin.com/in/yourusername",
+      "url": "https://linkedin.com/",
       "icon": "linkedin"
     },
     {
       "platform": "Twitter",
-      "url": "https://twitter.com/yourusername",
+      "url": "https://twitter.com/",
       "icon": "twitter"
-    },
-    {
-      "platform": "GitHub",
-      "url": "https://github.com/yourusername",
-      "icon": "github"
     }
   ],
   "form": {

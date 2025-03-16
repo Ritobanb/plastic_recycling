@@ -124,7 +124,7 @@ export default function Navbar() {
             ))}
             <div className="py-6 px-4">
               <p className="text-sm text-emerald-600/80 font-poppins">
-                Let's make a sustainable future together.
+                Let&apos;s make a sustainable future together.
               </p>
             </div>
           </nav>

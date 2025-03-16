@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Github, Twitter, Linkedin } from "lucide-react"
+import { Mail, MapPin, Phone, Twitter, Linkedin } from "lucide-react"
 import contactData from "../src/data/contact.json"
 
 const iconMap = {
@@ -7,7 +7,6 @@ const iconMap = {
   Phone,
   linkedin: Linkedin,
   twitter: Twitter,
-  github: Github,
 } as const
 
 export default function Footer() {

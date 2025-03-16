@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.meetsumouli.com
+
+# Sitemaps
+Sitemap: https://www.meetsumouli.com/sitemap.xml
